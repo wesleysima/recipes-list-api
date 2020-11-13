@@ -1,0 +1,11 @@
+version: "2.4"
+
+services:
+  app:
+    build:
+      context: .
+    restart: unless-stopped    
+    ports:
+      - "3006:3000"
+    environment:
+      - NODE_ENV=development

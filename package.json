@@ -1,0 +1,21 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "pm2": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/server.js"
+  },
+  "keywords": [],
+  "author": "Wesley Sima dos Santos",
+  "license": "ISC"
+}
