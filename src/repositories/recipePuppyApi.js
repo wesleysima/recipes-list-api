@@ -6,7 +6,7 @@ async function getRecipesByIngredients(ingredients) {
         i: ingredients
       }
     });
-
+    
     return data;
   }
 

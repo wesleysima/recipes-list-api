@@ -1,29 +1,22 @@
-const recipePuppyApi = require('../repositories/recipePuppyApi');
-const guiphyApi = require('../repositories/giphyApi');
-const utils = require('../utils') ;
+const recipesService = require('../services/recipesService');
+const utils = require('../utils');
+const createError = require('http-errors');
 
 async function getRecipesByIngredients(req, res, next) {
-    let recipesReturn = [];
-
     try {
-        let recipesAPi = await recipePuppyApi.getRecipesByIngredients(req.query.i);
+        ingredientsParams = req.query.i;
 
-        for (let recipe in recipesAPi.results) {
-            titleCleaned = recipe.title.trim();
-            let gif = await guiphyApi.getGiphy(titleCleaned);
+        if ( ingredientsParams.split(',').length > 3) {
+            throw new TypeError();
+          }
 
-            recipesReturn.push({
-                title: titleCleaned,
-                ingredients: utils.sortArray(recipe.ingredients.split(', ')), // Cast ingredients to array and sort
-                link: recipe.href,
-                gif: gif
-            })
-        }
+        recipes = await recipesService.mountRecipesJson(ingredientsParams);
 
         res.json({
-            keywords: utils.removeSpecialCaractersFromArray(req.query.i.split(',')),
-            recipes: recipesReturn
+            keywords: utils.removeSpecialCaractersFromArray(ingredientsParams.split(',')),
+            recipes: recipes
         });
+        
     } catch (err) {
         return next(err);
     }
