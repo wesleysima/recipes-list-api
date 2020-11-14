@@ -65,7 +65,7 @@ Atualmente a API possui apennas um endpoint
 **Exemplo:**
 
 ```
-http://localhost:3000/recipes/?i=onions,garlic
+http://localhost:3006/recipes/?i=onions,garlic
 ```
 Aqui tem um exemplo de retorno do request.
 
