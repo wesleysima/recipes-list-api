@@ -1,6 +1,5 @@
 const recipesService = require('../services/recipesService');
 const utils = require('../utils');
-const createError = require('http-errors');
 
 async function getRecipesByIngredients(req, res, next) {
     try {

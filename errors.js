@@ -26,9 +26,8 @@ function invalidParameterHandler(err, req, res, next) {
         status: 400,
         message: 'Only 3 ingredient parameters can be sent!'
       });
-    } else {
+    } else
       next(err);
-    }
   }
 
   module.exports = {
