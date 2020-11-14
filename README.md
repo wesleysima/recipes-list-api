@@ -71,30 +71,18 @@ Aqui tem um exemplo de retorno do request.
 
 ```json
 {
-   "keywords":[
-      "onions",
-      "garlic"
-   ],
-   "recipes":[
-      {
-         "title":"Roasted Garlic Grilling Sauce",
-         "ingredients":[
-            "garlic",
-            "hot sauce",
-            "onions"
-         ],
-         "link":"http://www.kraftfoods.com/kf/recipes/roasted-garlic-grilling-sauce-56344.aspx",
-         "gif":"https://media1.giphy.com/media/Q4PcMC8apFXBm/giphy.gif"
-      },
-      {
-         "title":"Steamed Mussels I",
-         "ingredients":[
-            "garlic",
-            "mussels",
-            "onions"
-         ],
-         "link":"http://allrecipes.com/Recipe/Steamed-Mussels-I/Detail.aspx",
-         "gif":"https://media1.giphy.com/media/iix3nosdByWLm/giphy.gif"
-      },
-   ]
+	"keywords": ["onion", "tomato"],
+	"recipes": [{
+		"title": "Greek Omelet with Feta",
+		"ingredients": ["eggs", "feta cheese", "garlic", "red onions", "spinach", "tomato", "water"],
+		"link": "http://www.kraftfoods.com/kf/recipes/greek-omelet-feta-104508.aspx",
+		"gif": "https://media.giphy.com/media/xBRhcST67lI2c/giphy.gif"
+	   },{
+		"title": "Guacamole Dip Recipe",
+		"ingredients": ["avocado", "onions", "tomato"],
+		"link":"http://cookeatshare.com/recipes/guacamole-dip-2783",
+		"gif":"https://media.giphy.com/media/I3eVhMpz8hns4/giphy.gif"
+	   }
+	]
 }
+```
