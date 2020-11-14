@@ -1,24 +1,13 @@
 const recipesService = require('../services/recipesService');
 const utils = require('../utils');
 
-async function getRecipesByIngredients(req, res, next) {
-    try {
-        ingredientsParams = req.query.i;
+async function getRecipesByIngredients(req, res) {
+    recipes = await recipesService.mountRecipesJson(req.query.i);
 
-        if ( ingredientsParams.split(',').length > 3) {
-            throw new TypeError();
-          }
-
-        recipes = await recipesService.mountRecipesJson(ingredientsParams);
-
-        res.json({
-            keywords: utils.removeSpecialCaractersFromArray(ingredientsParams.split(',')),
-            recipes: recipes
-        });
-        
-    } catch (err) {
-        return next(err);
-    }
+    res.json({
+        keywords: utils.removeSpecialCaractersFromArray(req.query.i.split(',')),
+        recipes: recipes
+    });
 }
 
 module.exports = {

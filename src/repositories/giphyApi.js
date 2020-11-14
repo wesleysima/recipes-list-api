@@ -1,9 +1,11 @@
 const axios = require('axios');
 
 async function getGiphy(searchString) {
-    const {  data } = await axios.get(process.env.GIPHY_API_URL, {
+    // const {  data } = await axios.get(process.env.GIPHY_API_URL, {
+    const {  data } = await axios.get("http://api.giphy.com/v1/gifs/search", {
         params: {
-          api_key: process.env.GIPHY_API_KEY,
+          // api_key: process.env.GIPHY_API_KEY,
+          api_key: "5Vvc6ZcAJf1BusGLojMnn1fQzkOSddOY",
           limit: 1,
           q: searchString
         }});
