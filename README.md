@@ -48,7 +48,7 @@ Após a instalação das dependências com o comando acima, inicie a API com o s
 
 ## Configuração do Projeto
 
-Existe um arquivo de configuração na raiz do projeto **env-variables.env**, nele contém algumas variáveis de ambiente, abaixo se encontram as variáveis existentes atualmente:
+Existe um arquivo de configuração na raiz do projeto **.env**, nele contém algumas variáveis de ambiente, abaixo se encontram as variáveis existentes atualmente:
 
 - `RECIPE_PUPPY_API_URL`: URL da API do recipe puppy.
 - `GIPHY_API_URL`: URL da API do Giphy.
